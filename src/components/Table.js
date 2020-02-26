@@ -9,25 +9,29 @@ export default class Table extends Component {
 		}
 	}
 
+    componentDidMount(){
+        console.log('[Table.js] did mount')
+    }
+
 	componentWillReceiveProps() {
-		
+
 	}
 
     // complete the comparators
 	compareByAge(a, b) {
-		
+		return a > b
 	}
 
 	compareByName(a, b) {
-		
+		return a > b
 	}
 
 	compareByPoints(a, b) {
-		
+		return a > b
 	}
 
 	compareByRank(a, b) {
-		
+		return a > b
 	}
 
 	render() {
@@ -42,7 +46,22 @@ export default class Table extends Component {
 						<th>Rank</th>
 					</tr>
 				</thead>
-				<tbody></tbody>
+				<tbody>
+				<tr>
+				</tr>
+				<td>
+				{this.state.users.map((item, index) => <p key={item.index}>{item.age}</p>)}
+				</td>
+				<td>
+				{this.state.users.map((item, index) => <p key={item.index}>{item.name}</p>)}
+				</td>
+				<td>
+                {this.state.users.map((item, index) => <p key={item.index}>{item.points}</p>)}
+                </td>
+                <td>
+                {this.state.users.map((item, index) => <p key={item.index}>{item.rank}</p>)}
+                </td>
+				</tbody>
 			</table>
 		</div>)
 	}

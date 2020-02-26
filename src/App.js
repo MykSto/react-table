@@ -35,10 +35,10 @@ export default class App extends Component {
           <h1>Leaderboard</h1>
         </header>
         <div className="text-center buttons">
-          <Age></Age>
-          <Name></Name>
-          <Points></Points>
-          <Rank></Rank>
+          <Age clicked={this.handleClickAge}/>
+          <Name clicked={this.handleClickName}></Name>
+          <Points clicked={this.handleClickPoints}></Points>
+          <Rank> clicked={this.handleClickRank}</Rank>
           <Table></Table>
         </div>
       </div>
