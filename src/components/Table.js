@@ -47,8 +47,6 @@ export default class Table extends Component {
 					</tr>
 				</thead>
 				<tbody>
-				<tr>
-				</tr>
 				<td>
 				{this.state.users.map((item, index) => <p key={item.index}>{item.age}</p>)}
 				</td>
